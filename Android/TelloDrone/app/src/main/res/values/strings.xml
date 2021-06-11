@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TelloDrone</string>
+    <string name="app_name_start">Tello Drone Testing</string>
+    <string name="launch">Take Off</string>
+    <string name="land">Land</string>
+    <string name="up">Up</string>
+    <string name="down">Down</string>
+    <string name="fwd">Forward</string>
+    <string name="bwd">Backward</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="rotate_left">Rotate Left</string>
+    <string name="rotate_right">Rotate Right</string>
+</resources>

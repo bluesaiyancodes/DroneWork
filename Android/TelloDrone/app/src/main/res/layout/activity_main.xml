@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Header Style -->
+    <LinearLayout
+        android:id="@+id/tello_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/teal_700" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@android:color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@android:color/holo_orange_dark" />
+    </LinearLayout>
+
+
+    <!--  Video Testing  -->
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/player_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/tello_header" />
+
+
+    <!-- Control Buttons -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/player_view"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/tello_launch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/white"
+            android:elevation="5dp"
+            android:text="@string/launch"
+            android:textColor="@color/textColor" />
+
+        <Button
+            android:id="@+id/tello_land"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tello_launch"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/white"
+            android:elevation="5dp"
+            android:text="@string/land"
+            android:textColor="@color/textColor" />
+
+        <RelativeLayout
+            android:id="@+id/tello_rl_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tello_land"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp">
+
+            <Button
+                android:id="@+id/tello_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:elevation="5dp"
+                android:text="@string/up"
+                android:textColor="@color/textColor" />
+
+            <Button
+                android:id="@+id/tello_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_toEndOf="@id/tello_up"
+                android:backgroundTint="@color/white"
+                android:elevation="5dp"
+                android:text="@string/down"
+                android:textColor="@color/textColor" />
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/tello_fwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tello_rl_vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/white"
+            android:elevation="5dp"
+            android:text="@string/fwd"
+            android:textColor="@color/textColor" />
+
+
+        <RelativeLayout
+            android:id="@+id/tello_rl_side"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tello_fwd"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/tello_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:elevation="5dp"
+                android:text="@string/left"
+                android:textColor="@color/textColor" />
+
+            <Button
+                android:id="@+id/tello_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_toEndOf="@id/tello_left"
+                android:backgroundTint="@color/white"
+                android:elevation="5dp"
+                android:text="@string/right"
+                android:textColor="@color/textColor" />
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/tello_bwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tello_rl_side"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/white"
+            android:elevation="5dp"
+            android:text="@string/bwd"
+            android:textColor="@color/textColor" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tello_bwd"
+            android:layout_marginTop="30dp">
+
+            <Button
+                android:id="@+id/tello_left_rot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:backgroundTint="@color/white"
+                android:elevation="5dp"
+                android:text="@string/rotate_left"
+                android:textColor="@color/textColor" />
+
+            <Button
+                android:id="@+id/tello_right_rot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                android:backgroundTint="@color/white"
+                android:elevation="5dp"
+                android:text="@string/rotate_right"
+                android:textColor="@color/textColor" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
